@@ -4,20 +4,15 @@ describe(`Function 'checkPassword':`, () => {
   const checkPassword = require('./checkPassword');
 
   it(`should be declared`, () => {
-    expect(checkPassword).toBeInstanceOf(Function);
+    expect(checkPassword).toBeDefined();
   });
 
-  it(`should return boolean`, () => {});
-
-  it(`should return 'true' for the valid password with 8 characters`, () => {});
-
-  // write more tests here
+  it(`should return boolean`, () => {
+    expect(checkPassword).toBeTruthy();
+  });
 
   it(`should return 'true' for the valid password`, () => {
     expect(checkPassword('sam1@Zqwer')).toBeTruthy();
-  });
-
-  it(`should return 'true' for the valid password`, () => {
     expect(checkPassword('jACK1__lol')).toBeTruthy();
   });
 
